@@ -1,10 +1,20 @@
-def srecords(snumber,sname,scode):
-    for i in snumber:
-        snumber<len(8)
-        print("Enter a student ")
-        snumber=input(int)
-    for j in sname:
-        print("Enter a name")
-        sname=input(str)
-    for k in scode:
-        print(Enter a code)
+def srecords(snumber,scode,sname):
+    
+
+    print("Student number")
+    
+    if len(str(snumber))==8:
+        print (int(snumber))
+        
+    else:
+        print("Incorrect Input")
+        
+    print("Subject code")
+    if len(str(scode))==7:
+        print (int(scode))
+    else:
+        print("Incorrect Input")
+        
+    print("Student name is")
+    print(str(sname))
+        
