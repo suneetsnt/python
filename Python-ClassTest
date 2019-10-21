@@ -1,1 +1,10 @@
-
+def srecords(snumber,sname,scode):
+    for i in snumber:
+        snumber<len(8)
+        print("Enter a student ")
+        snumber=input(int)
+    for j in sname:
+        print("Enter a name")
+        sname=input(str)
+    for k in scode:
+        print(Enter a code)
