@@ -14,3 +14,10 @@ def Students():
             
      
      return Studentdetails
+     
+print(Students())
+
+adds=input("Press 1 to add new users and Press 0 to exit")
+while (adds=="1"):
+    print(Students())
+    adds=input("Press 1 to add new users and Press 0 to exit")
