@@ -1,29 +1,16 @@
- class StudentDB:
-        def __init__(self,studentname,studentid,courseid): 
-            self.studentname = studentname
-            self.studentid = studentid
-            self.courseid = courseid
-            print(self.studentname,self.studentid,self.courseid)
-            
-    
+
+Studentdetails = []
+
+
 def Students():
      name = input("Enter name: ") 
      sid = int(input("Enter user id: "))
      cid = input("Enter courseid: ")
+     Studentdetail=[name,sid,cid]
         
-     studentname = []
-     studentid = []
-     courseid = []
     
-     for i in range(0,100000000):
-            studentid.append(sid)
-            studentname.append(name)
-             
-     if len(cid)==7:
-            courseid.append(cid)
+     if len(str(sid))<9 and len(cid)==7:
+            Studentdetails.append(Studentdetail)
             
-     Studentdetails=StudentDB(studentname,studentid,courseid)
+     
      return Studentdetails
-            
-
-print(Students())
