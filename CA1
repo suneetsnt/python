@@ -1,23 +1,30 @@
-
-Studentdetails = []
-
+studentdetails=[]
+details= []
+studentid = []
+courseid = []
 
 def Students():
-     name = input("Enter name: ") 
-     sid = int(input("Enter user id: "))
-     cid = input("Enter courseid: ")
-     Studentdetail=[name,sid,cid]
-        
+    name = input("Enter name: ")
     
-     if len(str(sid))<9 and len(cid)==7:
-            Studentdetails.append(Studentdetail)
+    sid = int(input("Enter user id: "))
+    while len(str(sid))>9:
+        sid = int(input("Enter user id: "))
+    cid = input("Enter courseid: ")
+    while len(str(cid))>7:
+        cid = input("Enter courseid: ")
             
+    studentdetails=[sid, name, cid]
+    details.append(studentdetails)
+
+    return details.sort()
      
-     return Studentdetails
-     
-print(Students())
 
 adds=input("Press 1 to add new users and Press 0 to exit")
 while (adds=="1"):
-    print(Students())
+    Students()
     adds=input("Press 1 to add new users and Press 0 to exit")
+print(f'{details}')
+
+
+
+
