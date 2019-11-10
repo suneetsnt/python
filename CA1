@@ -33,6 +33,7 @@ def add():
       continue
 
     detail=(int(num),name,course)
+    sort(0,int(len(StudentRecord)/2),len(StudentRecord)-1,detail)
 
     print("Do you wish to add students to the database?\n")
     addStudent=input("Input Y for Yes or any other key to exit : ")
