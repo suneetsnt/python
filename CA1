@@ -1,3 +1,6 @@
+StudentRecord=list()
+StudentRecord.append((000,"Default","000"))
+
 def add():
   
   addStudent='Y'
@@ -39,3 +42,38 @@ def add():
       print("Finished inputting Student Records")
 
       break
+      
+ def sort(l,m,h,n):
+  low=int(l)
+  mid=int(m)
+  high=int(h)
+  newVal=n[0]
+  
+  if(newVal<StudentRecord[low][0]):
+    print((low,high,mid))
+    StudentRecord.insert(low,n)
+    return
+
+  if(newVal>StudentRecord[high][0]):
+    StudentRecord.insert(high+1,n)
+    return
+    
+  if low<mid:
+
+    if(newVal>StudentRecord[low][0] and newVal<StudentRecord[mid][0]):
+      high=mid
+      mid=int((low+high)/2)
+      sort(low,mid,high,n)
+    
+    if(newVal>StudentRecord[mid][0] and newVal<StudentRecord[high][0]):
+      low=mid
+      mid=int((low+high)/2)
+      sort(low,mid,high,n)
+
+  
+    if(low==mid):
+        StudentRecord.insert(mid+1,n)
+        return
+      
+  return
+ 
