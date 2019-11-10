@@ -41,7 +41,6 @@ def add():
       continue
     else:
       print("Finished inputting Student Records")
-      print(StudentRecord)
 
       break
       
@@ -52,7 +51,6 @@ def sort(l,m,h,n):
   newVal=n[0]
   
   if(newVal<StudentRecord[low][0]):
-    print((low,high,mid))
     StudentRecord.insert(low,n)
     return
 
@@ -90,6 +88,8 @@ def retrieve():
 
 
 add()
+
+StudentRecord
 
 retrieve()
 
