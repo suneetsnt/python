@@ -78,9 +78,20 @@ def sort(l,m,h,n):
         return
       
   return
+  
+def retrieve():
+  
+  if(len(StudentRecord)>1):
+    nn=StudentRecord[1]
+    StudentRecord.pop(1)
+    return nn
+  else:
+    return "Empty Record"
 
 
 add()
+
+retrieve()
 
 
 
